@@ -38,3 +38,22 @@ def test_env_override(tmp_path: Path, monkeypatch):
 
     result = find_project_root(tmp_path / "anything")
     assert result == str(env_root.resolve())
+
+
+def test_project_name_priority_over_marker_search(tmp_path: Path):
+    workspace = tmp_path / "workspace"
+    target = workspace / "target-proj"
+    target.mkdir(parents=True)
+
+    other = tmp_path / "other"
+    nested = other / "a" / "b"
+    nested.mkdir(parents=True)
+    (other / ".git").mkdir()
+
+    result = find_project_root(
+        path=nested,
+        use_env=False,
+        project_name="target-proj",
+        workspace_roots=[workspace],
+    )
+    assert result == str(target.resolve())

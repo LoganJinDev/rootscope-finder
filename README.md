@@ -57,3 +57,21 @@ python -m build
 ## License
 
 MIT
+
+## Publish to PyPI
+
+This repository includes `.github/workflows/publish-pypi.yml`.
+
+1. In PyPI, create project `rootscope-finder` and configure Trusted Publisher for this GitHub repo.
+2. Create and push a version tag:
+
+```bash
+git tag v0.1.1
+git push origin v0.1.1
+```
+
+3. After workflow success, users can install directly:
+
+```bash
+pip install rootscope-finder
+```

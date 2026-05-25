@@ -107,9 +107,7 @@ pytest
 python -m build
 ```
 
-## License
-
-MIT
+## MIT License
 
 Copyright © 2026 https://github.com/LoganJinDev
 

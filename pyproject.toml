@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "rootscope-finder"
+version = "0.1.0"
+description = "Lightweight project root discovery for Python projects and CLI workflows"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "LoganJinDev" }
+]
+keywords = ["project-root", "root-finder", "cli", "developer-tools"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Utilities",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/LoganJinDev/rootscope-finder"
+Repository = "https://github.com/LoganJinDev/rootscope-finder"
+Issues = "https://github.com/LoganJinDev/rootscope-finder/issues"
+
+[project.scripts]
+find-root = "rootscope_finder.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rootscope_finder"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

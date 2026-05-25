@@ -111,6 +111,8 @@ python -m build
 
 MIT
 
+Copyright © 2026 https://github.com/LoganJinDev
+
 ## Publish to PyPI
 
 This repository includes `.github/workflows/publish-pypi.yml`.

@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "rootscope-finder"
-version = "0.1.0"
+version = "0.2.0"
 description = "Lightweight project root discovery for Python projects and CLI workflows"
 readme = "README.md"
 requires-python = ">=3.9"
